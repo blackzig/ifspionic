@@ -5,13 +5,33 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-grid>
+    <ion-row>
+      <ion-col width-100>
+        <ion-list>
+          <form (ngSubmit)="itsATriangle()">
+            <ion-item>
+              <ion-label fixed>
+                Lado 1
+              </ion-label>
+              <ion-input [(ngModel)]="side1" name="side1" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label fixed>
+                Lado 2
+              </ion-label>
+              <ion-input [(ngModel)]="side2" name="side2" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label fixed>
+                Lado 3
+              </ion-label>
+              <ion-input [(ngModel)]="side3" name="side3" type="text"></ion-input>
+            </ion-item>
+            <button ion-button type="submit" block>É um triângulo?</button>
+          </form>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
